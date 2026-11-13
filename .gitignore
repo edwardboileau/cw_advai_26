@@ -3,6 +3,7 @@
 
 # Generated outputs and model weights
 /outputs/
+/logs/
 /checkpoints/
 *.pt
 *.pth

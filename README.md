@@ -1,6 +1,6 @@
 # Advanced Visual AI coursework
 
-doesn't do anything
+currently just dip based on the lab
 
 ## Setup
 
@@ -8,7 +8,7 @@ First clone this repo. Then:
 
 ### Install dependencies with Conda
 
-Conda works on the lab machines, so that's why I'm using it. The dependencies are in requirements.txt so you can install them another way if you'd like
+Conda works on the lab machines, so that's why I'm using it. The dependencies are in requirements.txt so you can install them another way if you'd like.
 
 In the project root, run: 
 
@@ -36,8 +36,24 @@ data/
 └── DIV2K_valid_LR_x8/
 ```
 
-### explanation of how to run it goes here
+### Run Deep Image Prior
 
+```bash
+conda activate advai #if it's deactivated
+python src/dip.py
+```
 
+The model's predicted PNGs and the Tensorboard logs for the run are saved automatically to outputs/
 
+### View results in TensorBoard
+
+In a second terminal run 
+
+```bash
+conda activate advai
+tensorboard --logdir outputs
+```
+
+then open http://localhost:6006 to compare loss curves, timings, prediction images, and
+model settings across runs.
 
