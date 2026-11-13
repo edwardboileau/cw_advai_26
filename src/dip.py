@@ -25,7 +25,7 @@ def display_images(
 
     Each image is a tensor shaped [3, H, W] or [1, 3, H, W],
     with RGB pixel values in [0, 1]. Images may have different sizes.
-    Supply one title per image, or omit titles
+    Either do no titles or titles for each image
     """
     if isinstance(images, torch.Tensor):
         images = [images]
@@ -92,4 +92,4 @@ if __name__ == "__main__":
         need1x1_up=True,
     )
 
-    
+
