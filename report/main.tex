@@ -1,0 +1,77 @@
+\documentclass[11pt,a4paper]{article}
+
+\usepackage[margin=2.5cm]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{booktabs}
+\usepackage[hidelinks]{hyperref}
+\graphicspath{{figures/}}
+
+\title{Image Super-Resolution: A Comparison of Selected Methods}
+\author{Your student ID}
+\date{}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+% Summarise the problem, methods, experiments, main findings and conclusions.
+% Write this once the experiments are complete.
+\noindent\textit{Abstract to be written.}
+
+\noindent Code: \url{https://github.com/YOUR-USERNAME/YOUR-REPOSITORY}
+\end{abstract}
+
+\section{Introduction}
+% Introduce image super-resolution, its challenges and the aims of this study.
+
+\section{Selected Methods}
+% Justify the choice of methods.
+
+\subsection{Method 1}
+% Replace the heading with the method name. Explain the method and cite sources.
+
+\subsection{Method 2}
+% Explain the second method and cite sources.
+
+% Uncomment if completing the optional challenge.
+% \subsection{Method 3}
+% Explain the method identified from literature outside the taught curriculum.
+
+\section{Experimental Design}
+
+\subsection{Dataset and Metrics of Evaluation}
+% Describe DIV2K, the selected image splits, preprocessing and image pairing.
+% Define PSNR, SSIM and LPIPS, including ranges and evaluation conventions.
+
+\subsection{Training}
+% Describe model settings, objectives, optimisers, stopping rules, seeds,
+% hardware and runtime. Distinguish dataset training from per-image fitting.
+
+\subsection{Validation}
+% Explain how settings are chosen and how evaluation images are kept separate.
+% Do not optimise reconstruction parameters using evaluation HR targets.
+
+\subsection{Qualitative and Quantitative Comparison of Methods}
+
+\subsubsection{Bicubic $\times 8$ Super-Resolution}
+% Compare the methods and a bicubic baseline using metrics and image crops.
+
+\subsubsection{Impact of Noise Degradation}
+% Specify where noise is added, its distribution, levels, units and clipping.
+% Compare low and high noise levels using the same evaluation protocol.
+
+\subsubsection{Impact of Downscaling}
+% Further downscale the supplied x8 inputs by 2 and reconstruct at x16.
+% Explain changes to methods and compare performance with the x8 experiments.
+
+\section{Conclusions}
+% Summarise findings, limitations and possible future work.
+
+% Add BibTeX entries to references.bib and cite them using \cite{citation-key}.
+% Uncomment the following lines after adding your first citation.
+% \bibliographystyle{plain}
+% \bibliography{references}
+
+\end{document}

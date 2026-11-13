@@ -1,0 +1,13 @@
+# Local datasets
+/data/
+
+# Generated outputs and model weights
+/outputs/
+/checkpoints/
+*.pt
+*.pth
+
+# Python and Jupyter
+__pycache__/
+.ipynb_checkpoints/
+.venv/

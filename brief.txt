@@ -1,0 +1,140 @@
+COMSM0160 - Advanced Visual AI Coursework Instructions
+
+
+1. General Information
+1.1. Overview
+This assignment is the summative piece of unit coursework
+for COMSM0160 for those who elected to do the CW ver-
+sion of COMSM0159. The assignment focusses on the
+classical problem of image super-resolution. It runs over
+3 weeks and must be completed individually.
+The report will be in the form of a research paper follow-
+ing the example structure and template provided on page 2.
+The report should be zipped together with the code that you
+will be using to produce all results. It should also include a
+link to the GitHub project that you will be creating.
+1.2. The Image Super-Resolution Problem
+Image super-resolution is a technique in computer vision
+used to enhance the resolution of an image. It takes a low-
+resolution image and applies from simple interpolation to
+learning-based methods to generate a high-resolution ver-
+sion of the same image. Super-resolution techniques are
+commonly used in applications like video services, medical
+imaging, image and video enhancement.
+Within this assignment you are asked to select two of
+the methods you have been taught in lectures and have pre-
+viously applied during lab sessions, to solve other inverse
+problems, such as deconvolution/deblurring or denoising.
+Bonus marks will be given for the implementation of a third
+method. A comparative analysis of the methods is required.
+1.3. Dataset and Metrics
+Use the NTIRE 2018 dataset and, particularly, the Train
+and Validation Track 1 – bicubic x 8: 
+https://data.vision.ee.ethz.ch/cvl/DIV2K/
+For the evaluation quality metrics including PSNR,
+SSIM, and LPIPS are required to be employed.
+1.4. Assessment
+You will be marked on both code and report. Please do not
+attempt to copy code or report text, etc. You are allowed to
+use any PyTorch libraries – but, in any case, you must un-
+derstand the algorithmic workings of the functions used. If
+you do use code/text that is not your own, please declare this
+in your report with appropriate citation. Note, plagiarism
+is taken very seriously based on university plagiarism poli-
+cies and processes and plagiarism detection software will
+be used. Please avoid it.
+The distribution of marks can be found on page 2.
+1.5. Submission
+Each student is required to upload their full piece of work
+(incl all source code files, and your report in PDF) com-
+pressed into a ZIP file. Your report should be named as
+youruserid.pdf. There is no page limit, but a length of at
+least 3 pages is expected. The report should include a link
+to the GitHub repository created for the coursework.
+Your zip file should be submitted on Blackboard un-
+der “Assessment, submission and feedback” on UNIT
+COMSM0160 before the deadline at 13:00 on Thursday
+3 December 2026. Make sure you submit it an hour early
+or so (not last minute!) to avoid upload problems. Even
+if your upload is a single second late you will immediately
+have 10% deducted (per day) from your mark by the system
+(a universal BB imposition - out of our control).
+1.6. Managing your assignment
+Instead of lectures, from week 9 there will be Course-
+work Support Sessions running (on Thursdays from 11.00
+to 12.00 - they are in your timetable), with TAs to answer
+your queries. Please do not ask “Does this look correct
+enough to get the marks?” Note, the TAs cannot provide
+academic solutions to the coursework, as per the School of
+Computer Science instructions.
+
+2. Tasks to be Completed
+2.1. Comparison of Methods (15 marks)
+This first task requires you to pick two methods from the
+three groups taught, and compare their performances on the
+DIV2K dataset. You may choose to use the code provided
+to you for the labs.
+The three classes of methods (with subcategories) stud-
+ied as part of the lab sessions were:-
+1. Model-Based and Data-Driven ML
+• Deep Image Prior
+• Deep Unfolding
+2. Generative AI
+• Variational Autoencoders (VAEs)
+• Generative Adversarial Networks (GANs)
+• Diffusion Models
+3. Implicit Neural Representations
+2.2. Impact of Noise Degradation (5 marks)
+Noise is a common degradation in computer vision and
+causes all sorts of problems. There are numerous reasons
+why noise can appear in images, e.g., shot noise, compres-
+sion artifacts, transmission, etc.
+This task requires you to synthetically add noise to the
+dataset and determine how it affects the performance of the
+chosen methods. You will need to describe how you imple-
+ment this.
+You should investigate the effect of various levels of
+noise so you can report on the influence of both low and
+high noise levels.
+2.3. Impact of Downscaling (5 marks)
+Generally, image super-resolution simulations consist in
+taking high-resolution images, applying some downscaling
+operation onto these images, and employ SR methodologies
+to upscale them back to the original resolution.
+This task requires you to further downscale the down-
+scaled ×8 images by a factor of 2. Then modify your meth-
+ods to upscale ×16. Describe how this may have impacted
+the performance of the chosen methods.
+2.4. Challenge (10 marks)
+For achieving higher marks, you will need to perform all
+previously described experiments via a third method, that
+you would identify by surveying the relevant literature (not
+one that was taught in the curriculum). This third method
+should ideally achieve higher performances than the other
+chosen methods.
+2.5. Report (5 marks)
+These marks will be awarded based on the overall standard
+of presentation, analysis and evaluation of your report. The
+report should be structured according to the instructions in
+the next section.
+3. Report Structure
+Abstract
+Here you will put a summary of experiments you performed.
+Include the link to your GitHub repository here.
+1. Introduction
+Describe briefly the image super-resolution task
+2. Selected Methods
+Justification of the selected methodologies
+2.1. Method 1
+Basic description with references
+2.2. Method 2
+Basic description with references
+2.3. Optional Method 3
+Basic description with references
+3. Experimental Design
+• Dataset and Metrics of Evaluation
+• Training
+• Validation
+• Qualitative and Quantitative Comparison of Methods
+4. Conclusions
+References
