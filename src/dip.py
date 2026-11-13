@@ -23,17 +23,12 @@ def load_image(path):
     pixels = np.asarray(image, dtype=np.float32) / 255.0
     return torch.from_numpy(pixels).permute(2, 0, 1).unsqueeze(0)
 
-
+#one image or sequence of images side by side. Each image is a tensor shaped [3, H, W] or [1, 3, H, W],
+#with RGB pixel values between 0 and 1. either all titles or no titles please
 def display_images(
     images: torch.Tensor | Sequence[torch.Tensor],
     titles: str | Sequence[str] | None = None,
 ) -> None:
-    """Display one image or a sequence of images side by side.
-
-    Each image is a tensor shaped [3, H, W] or [1, 3, H, W],
-    with RGB pixel values in [0, 1]. Images may have different sizes.
-    Either do no titles or titles for each image
-    """
     if isinstance(images, torch.Tensor):
         images = [images]
     if not images:
